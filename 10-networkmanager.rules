@@ -1,0 +1,10 @@
+polkit.addRule(function(action, subject) {
+  if (subject.isInGroup("network") &&
+     (action.id == "org.freedesktop.NetworkManager.settings.modify.own" ||
+      action.id == "org.freedesktop.NetworkManager.settings.modify.system" ||
+      action.id == "org.freedesktop.NetworkManager.network-control"   ||
+      action.id == "org.freedesktop.NetworkManager.enable-disable-wifi"||
+      action.id == "org.freedesktop.NetworkManager.wifi.scan")) {
+    return polkit.Result.YES;
+  }
+});

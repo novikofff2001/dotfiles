@@ -1,0 +1,12 @@
+# Polkit rules for remote login session
+/etc/polkit-1/rules.d/10-networkmanager.rules
+
+# Useful scripts
+/home/nnovikov/Documents/functions/
+
+# VIM configuration
+/home/nnovikov/.vimrc
+/home/nnovikov/.config/nvim/
+
+# ZSH config
+/home/nnovikov/.zshrc
